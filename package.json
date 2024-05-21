@@ -1,6 +1,7 @@
 {
   "name": "ideator",
   "version": "0.1.0",
+  "homepage": "https://sarathk82.github.io/ideator/",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.5.2",
@@ -21,6 +22,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "deploy": "gh-pages -d build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
