@@ -36,3 +36,17 @@
     transform: rotate(360deg);
   }
 }
+
+/* Hamburger menu */
+.hamburger-menu {
+  cursor: pointer;
+  font-size: 24px;
+  margin-left: 10px;
+  color: white; /* Hamburger menu color */
+  transition: transform 0.3s ease; /* Add transition for smooth animation */
+}
+
+.hamburger-menu.active {
+  transform: rotate(90deg); /* Rotate into X symbol */
+  color: white;
+}
