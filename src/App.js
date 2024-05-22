@@ -1,7 +1,7 @@
 
 import './App.css';
 import { Container } from 'react-bootstrap';
-import { HashRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from './component/Headers';
 import LoginScreen from './screens/LoginScreen';
 import HomeScreen from './screens/HomeScreen';
