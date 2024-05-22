@@ -28,8 +28,8 @@ function Header() {
                         <NavDropdown.Item href='/pricing'>Pricing</NavDropdown.Item>
                         <NavDropdown.Item href='/account'>Account</NavDropdown.Item>
                     </NavDropdown>
-                    <Navbar.Brand href="/">Ideator</Navbar.Brand>
-                    <Nav.Link href="/login">Login</Nav.Link>
+                    <Navbar.Brand href={`${process.env.PUBLIC_URL}/`}>Ideator</Navbar.Brand>
+                    <Nav.Link href={`${process.env.PUBLIC_URL}/login`}>Login</Nav.Link>
                 </Nav>
 
 

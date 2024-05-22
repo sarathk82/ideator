@@ -1,7 +1,7 @@
 {
   "name": "ideator",
   "version": "0.1.0",
-  "homepage": "https://sarathk82.github.io/ideator/",
+  "homepage": "https://sarathk82.github.io/ideator",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.5.2",
