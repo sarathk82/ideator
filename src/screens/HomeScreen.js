@@ -10,7 +10,7 @@ const HomeScreen = () => {
     const SubmitHandler = (e) => {
         e.preventDefault();
         console.log("Submit");
-        console.log(process.env.PUBLIC_URL);
+
     };
 
 
