@@ -1,17 +1,22 @@
 
 import './App.css';
 import { Container } from 'react-bootstrap';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes ,useLocation} from 'react-router-dom';
 import Header from './component/Headers';
 import LoginScreen from './screens/LoginScreen';
 import HomeScreen from './screens/HomeScreen';
+import RegisterScreen from './screens/RegisterScreen';
 
 function App() {
+
+//const baseUrl = (process.env.NODE_ENV === 'development') ? '' : `${process.env.PUBLIC_URL}`;
+//console.log(baseUrl);
+
 
 
   return (
 
-    <Router>
+    <BrowserRouter basename = '/ideator'>
 
       <Header />
 
@@ -20,9 +25,9 @@ function App() {
         <Container>
           <Routes>
 
-            <Route path={`${process.env.PUBLIC_URL}/`} element={<HomeScreen />} />
-            <Route path={`${process.env.PUBLIC_URL}/login`} element={<LoginScreen />} />
-
+            <Route exact path= '/' element={<HomeScreen />} />
+            <Route path= '/login' element={<LoginScreen />} />
+            <Route path='/register' element={<RegisterScreen />} />
 
           </Routes>
 
@@ -32,7 +37,7 @@ function App() {
 
 
 
-    </Router>
+    </BrowserRouter>
   );
 }
 

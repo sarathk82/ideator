@@ -19,7 +19,7 @@ function Header() {
     return (
 
         <header>
-            <Navbar bg='dark' variant='dark' expand="lg" collapseOnSelect>
+            <Navbar bg='primary' variant='dark' expand="lg" collapseOnSelect>
 
                 <Nav >
 
@@ -28,8 +28,8 @@ function Header() {
                         <NavDropdown.Item href='/pricing'>Pricing</NavDropdown.Item>
                         <NavDropdown.Item href='/account'>Account</NavDropdown.Item>
                     </NavDropdown>
-                    <Navbar.Brand href={`${process.env.PUBLIC_URL}/`}>Ideator</Navbar.Brand>
-                    <Nav.Link href={`${process.env.PUBLIC_URL}/login`}>Login</Nav.Link>
+                    <Navbar.Brand href='/ideator'>Ideator</Navbar.Brand>
+                    <Nav.Link href='/ideator/login'>Login</Nav.Link>
                 </Nav>
 
 

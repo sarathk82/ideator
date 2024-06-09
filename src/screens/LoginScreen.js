@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Form, Button } from 'react-bootstrap';
+import { Form, Button,Row,Col } from 'react-bootstrap';
+import { Link ,useLocation} from 'react-router-dom';
 import FormContainer from '../component/FormContainer';
 
 import 'bootstrap/dist/css/bootstrap.css';
@@ -16,7 +17,7 @@ const LoginScreen = () => {
 
     return (
         <FormContainer>
-            <h1>Sign In</h1>
+            <h2>Sign In</h2>
 
             <Form onSubmit={SubmitHandler}>
 
@@ -48,7 +49,13 @@ const LoginScreen = () => {
                 </Button>
 
             </Form>
-
+            <Row className='py-3'>
+                <Col>
+                New Customer? <Link to='/register'>
+                        Register
+                    </Link>
+                </Col>
+            </Row>
 
         </FormContainer>
     );

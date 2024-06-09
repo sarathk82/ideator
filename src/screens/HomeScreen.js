@@ -19,7 +19,7 @@ const HomeScreen = () => {
 
     return (
         <FormContainer>
-
+<h2>Provide your business idea</h2>
             <Form onSubmit={SubmitHandler}>
 
                 <Form.Group controlId='businessName'>
