@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { GoogleLogin, googleLogout, useGoogleLogin } from "@react-oauth/google";
+import { googleLogout, useGoogleLogin } from "@react-oauth/google";
 import axios from "axios";
 import { Form, Button, Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
@@ -17,13 +17,6 @@ const LoginScreen = () => {
 
   const [user, setUser] = useState([]);
   const [profile, setProfile] = useState([]);
-
-  const responseMessage = (response) => {
-    console.log(response);
-  };
-  const errorMessage = (error) => {
-    console.log(error);
-  };
 
   const login = useGoogleLogin({
     onSuccess: (codeResponse) => setUser(codeResponse),
@@ -49,6 +42,7 @@ const LoginScreen = () => {
         )
         .then((res) => {
           setProfile(res.data);
+          console.log(profile.picture);
         })
         .catch((err) => console.log(err));
     }
@@ -95,7 +89,11 @@ const LoginScreen = () => {
         <br />
         {profile ? (
           <div>
-            <img src={profile.picture} alt="user image" />
+            <img
+              src={profile.picture}
+              alt="Profile Pic"
+              referrerPolicy="no-referrer"
+            />
             <h3>User Logged in</h3>
             <p>Name: {profile.name}</p>
             <p>Email Address: {profile.email}</p>
